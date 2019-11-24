@@ -11,16 +11,99 @@
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-
-
-
-    
+<!-- Title -->
+<title>Train Scheduler</title>   
 
 </Head>
 <body>
 
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Mimban Express</h1>
+            <p>Train Schedule</p>
+        </div>
+    </div>
+    <div class="container">
 
 
+	<div class="panel panel-danger">
+
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<span class="glyphicon glyphicon-time"></span>  Current Train Schedule</h3>
+		</div>
+
+		<div class="panel-body">
+
+
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (min)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+						  <td>Nashville Express</td>
+						  <td>Clarksville</td>
+						  <td>25</td>
+						  <td>02:30 AM</td>
+						  <td>15</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div class="panel panel-danger">
+
+		<div class="panel-heading">
+			<h3 class="panel-title"><span class="glyphicon glyphicon-hand-down"></span>  Add Train</h3>
+		</div>
+
+		<div class="panel-body">
+			<form>
+				<div class="form-group">
+					<label for="trainName">Train Name</label>
+					<input type="text" class="form-control" id="trainName" placeholder="Enter the name of your train">
+				</div>
+
+				<div class="form-group">
+					<label for="destination">Destination</label>
+					<input type="text" class="form-control" id="destination" placeholder="Enter your train's destination">
+				</div>
+
+				<div class="form-group">
+					<label for="firstTrainTime">First Train Time (HH:MM Military Time)</label>
+					<input type="text" class="form-control" id="firstTrainTime" placeholder="HH:MM">
+				</div>
+
+				<div class="form-group">
+					<label for="frequency">Frequency (min)</label>
+					<input type="text" class="form-control" id="frequency" placeholder="MM">
+				</div>
+
+				<button type="submit" class="btn btn-danger" id="submitBtn">SUBMIT</button>
+			</form>
+		</div>
+
+	</div>
+
+</div>
+
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/train.js"></script>
 

@@ -15,7 +15,9 @@ $(document).ready(function(){
 
     // Variables
       var fireDatabase = firebase.database();
-      
+      console.log(fireDatabase)
+
+
 
 
 })      
